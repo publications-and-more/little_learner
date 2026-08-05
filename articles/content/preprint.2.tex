@@ -155,7 +155,7 @@ Results and more remarks will be given throughout the paper. Prior knowledge abo
 There exist by setting the cauchy stress tensor $\sigma$ to be the sum of a viscosity term $\tau$ and a pressure term $-p\, \mathbf{I}$, defined as the volumetric stress, the following equation:
 \begin{equation}
 \label{eq:cauchy}
-  \rho \frac{\mathbf{D}\textbf{u}}{\mathbf{D}t} = - \nabla p + \nabla \cdot \tau + \rho \, \textbf{a}.
+  \rho \frac{\mathbf{D}\mu }{\mathbf{D}t} = - \nabla p + \nabla \cdot \tau + \rho \, \textbf{a}.
 \end{equation}
 \end{definition}
 
@@ -167,7 +167,7 @@ There exist by setting the cauchy stress tensor $\sigma$ to be the sum of a visc
 
 \begin{remark}
 \label{rem:1}
-  Let the material derivative be defined as: $\frac{\mathbf{D}\textbf{u}}{\mathbf{D}t}$.
+  Let the material derivative be defined as: $\frac{\mathbf{D}\mu}{\mathbf{D}t}$.
 \end{remark}
 \begin{remark}
 \label{rem:2}
@@ -175,7 +175,7 @@ There exist by setting the cauchy stress tensor $\sigma$ to be the sum of a visc
 \end{remark}
 \begin{remark}
 \label{rem:3}
-  Let the flow density variable be defined as: $\textbf{u}$.
+  Let the flow density variable be defined as: $\mu$.
 \end{remark}
 \begin{remark}
 \label{rem:4}
@@ -199,12 +199,12 @@ There exist by setting the cauchy stress tensor $\sigma$ to be the sum of a visc
 \begin{definition}
 Assuming we use the defintion per Remark~\ref{rem:7}, redefining Equation~\ref{eq:cauchy}, that yields:
 \begin{equation}
-  \rho \frac{\mathbf{D}\textbf{u}}{\mathbf{D}t} = - \nabla p + \nabla \cdot \tau + \rho \, \textbf{a}.
+  \rho \frac{\mathbf{D}\mu}{\mathbf{D}t} = - \nabla p + \nabla \cdot \tau + \rho \, \textbf{a}.
 \end{equation}
 Assuming the variable of integration to be Remark~\ref{rem:7} between the open interval $[\mathbb{R}^{+}, +\infty)$:
 \begin{equation}
   \label{eq:integral:1}
-  \int_{\mathbb{R}^{+}}^{+\infty} \rho \frac{\mathbf{D}\textbf{u}}{\mathbf{D}t} \, dt = - \int_{\mathbb{R}^{+}}^{+\infty} \nabla p + \nabla \cdot \tau + \rho \, \textbf{a} \, dt.
+  \int_{\mathbb{R}^{+}}^{+\infty} \rho \frac{\mathbf{D}\mu}{\mathbf{D}t} \, dt = - \int_{\mathbb{R}^{+}}^{+\infty} \nabla p + \nabla \cdot \tau + \rho \, \textbf{a} \, dt.
 \end{equation}
 \end{definition}
 \begin{theorem}
@@ -225,7 +225,7 @@ Assuming the variable of integration to be Remark~\ref{rem:7} between the open i
   Let $\mathbb{R}^{+}_p$ be the element of index $p \in \mathbb{N}^{+}$ in the set $\mathbb{R}$.
 \end{definition}
 \begin{remark}
-  There shall be $p \geq 0$, and $\mathbb{R}^{+}_0 \neq \mathbb{R}^{+}_p \land \mathbb{R}^{+}_p > \mathbb{R}^{+}_0$.
+  There shall be $p \geq 0$, and $\mathbb{R}^{+}_0 \neq \mathbb{R}^{+}_p $ and $ \mathbb{R}^{+}_p > \mathbb{R}^{+}_0$.
 \end{remark}
 \begin{definition}
   Let the following construction applied from the interval of values of $x$ between $\mathbb{R}^{+}_0$ to $\mathbb{R}^{+}_{p}$, solving for $x=\mathcal{R}$:
@@ -234,11 +234,11 @@ Assuming the variable of integration to be Remark~\ref{rem:7} between the open i
   \end{equation}
   Reorganizing the inequality gives the following inequality:
   \begin{equation}
-    \mathbb{R}^{+}_0 - \mathcal{R} < \mathbb{R}^{+}_{p}.
+    \mathbb{R}^{+}_0 < \mathcal{R} < \mathbb{R}^{+}_{p}.
   \end{equation}
-  Imposing a limit of $\mathbb{R}^{+}_0 - \mathcal{R}$ from a value $n \to 0$ would be as the index of $\mathbb{R}^{+}_0$ is zero:
+  Imposing a variable $t \in \mathbb{R}$ and a limit of $\mathbb{R}^{+}_0 < \mathcal{R}$ from a value $n \to 0$ would be as the index of $\mathbb{R}^{+}_0$ is zero:
   \begin{equation}
-    \lim_{n \to 0} \mathbb{R}^{+}_n - \mathcal{R} < \mathbb{R}^{+}_{p}, \, p \neq 0, \, p > n.
+    \lim_{t \to \infty} \Bigl( \mathbb{R}^{+}_n < \mathcal{R} < \mathbb{R}^{+}_{p} \Bigr), \, p \neq 0, \, p > n.
   \end{equation}
   The limit has been invoked per \ref{eq:integral:1} to establish non-degeneracy cases for \ref{eq:cauchy} and \ref{eq:integral:1}. Moreover tigheting the interval of values would turn out to serve us well in the next sections about applied examples of the integral.
 \end{definition}
@@ -263,7 +263,7 @@ The plane per \ref{def:plane-1} is assumed to be non-degenerate and of fourth di
 \begin{corollary}
 Per \ref{def:plane-1} and \ref{rem:plane-1}, there exist a set of degenerate planes in $\mathbb{R}^{+}$, that are of fourth dimensional space, and are non-trivial and non-linear such that:
 \begin{equation}
-  \operatorname{plane}_{n}(x, y, z, t) \notin \mathbb{R}^{+}\, , \forall n \in \mathbb{N}^{+}.
+  \operatorname{Plane}_{n}(x, y, z, t) \notin \mathbb{R}^{+}\, , \forall n \in \mathbb{N}^{+}.
 \end{equation}
 \end{corollary}
 

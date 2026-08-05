@@ -143,8 +143,8 @@
 
 \lettrine[lines=1, lhang=0.1, loversize=0.2]{T}HE research paper covers and explores several mathematical concepts of Riemannian Manifolds and Structures in Abstract Algebra and Topology. We prove that:\\
 \begin{equation}
-  \int_{\mathcal{P}_{S,F}} \mathcal{F}_t(i,j,k)\,d\mathrm{vol}
-  = \int_{S}^{F} \left(\int_{\mathcal{P}_t} \mathcal{T}_i(t) \otimes \mathcal{T}_{ij}(t) \otimes \mathcal{T}_{ijk}(t)\,d\mathrm{vol}_t\right) dt
+  \int_{\mathcal{P}_{S,F}} \mathcal{F}_t(i,j,k)\,dV
+  = \int_{S}^{F} \left(\int_{\mathcal{P}_t} \mathcal{T}_i(t) \otimes \mathcal{T}_{ij}(t) \otimes \mathcal{T}_{ijk}(t)\,dV_t\right) dt
   = \mathcal{T}_i \otimes \mathcal{T}_{ij} \otimes \mathcal{T}_{ijk}
   = \langle \mathcal{P} \rangle.
 \end{equation}
@@ -181,9 +181,9 @@ Where $\mathbb{T}^{+}$ is the set of all non-zero three-dimensional tensors such
     \end{equation}
     A general identity, defined as an integral over the subregion $\mathcal{P}_{S,F}$ with respect to the Riemannian volume form, where $t \in [S, F]$ is a foliation parameter indexing a family of hypersurfaces $\{\mathcal{P}_t\}_{t \in [S,F]}$ that foliates $\mathcal{P}_{S,F}$, and $i, j, k$ are continuous local coordinates on each leaf $\mathcal{P}_t$:
     \begin{equation}
-      \langle \mathcal{P} \rangle_{g} = \int_{\mathcal{P}_{S,F}} \mathcal{F}_{t}(i, j, k) \, d\mathrm{vol}.
+      \langle \mathcal{P} \rangle_{g} = \int_{\mathcal{P}_{S,F}} \mathcal{F}_{t}(i, j, k) \, dV.
     \end{equation}
-    Where $\mathrm{vol}$ is the Riemannian volume form on $\mathcal{P}$. And $g$ represents a discrete part of the variable $\mathcal{P}$. 
+    Where $V$ is the Riemannian volume form on $\mathcal{P}$. And $g$ represents a discrete part of the variable $\mathcal{P}$. 
 \end{definition}
 
 %% ============================================================
@@ -207,12 +207,12 @@ Where $\mathbb{T}^{+}$ is the set of all non-zero three-dimensional tensors such
 
 \begin{corollary}
 \label{cor:integrability}
-  Let $\mathcal{F}_t$ be a continuous tensor field on the compact region $\mathcal{P}_{S,F} \subset \mathcal{P}$. Then $\mathcal{F}_t$ is integrable with respect to the Riemannian volume form $d\mathrm{vol}$, and $\int_{\mathcal{P}_{S,F}} \mathcal{F}_t(i,j,k)\,d\mathrm{vol}$ is well-defined.
+  Let $\mathcal{F}_t$ be a continuous tensor field on the compact region $\mathcal{P}_{S,F} \subset \mathcal{P}$. Then $\mathcal{F}_t$ is integrable with respect to the Riemannian volume form $dV$, and $\int_{\mathcal{P}_{S,F}} \mathcal{F}_t(i,j,k)\,dV$ is well-defined.
 \end{corollary}
 
 \begin{theorem}
 \label{theo:one}
-  Per Definition~\ref{def:two-one}, the integral $\int_{\mathcal{P}_{S,F}} \mathcal{F}_t(i, j, k)\,d\mathrm{vol}$ defines a specific case of $\langle \mathcal{P} \rangle$ over a Riemannian manifold, where $\mathcal{F}_t$ is a continuous tensor field on $\mathcal{P}$ and $\mathcal{P}_{S,F}$ is the subregion bounded by regions $S$ and $F$. This follows from Corollary~\ref{cor:integrability} and Fubini's theorem for Riemannian submersions: if $\mathcal{P}_{S,F}$ admits a foliation by $t$-slices, the integral decomposes as an iterated integral over fibers, recovering the contraction $\mathcal{T}_i \otimes \mathcal{T}_{ij} \otimes \mathcal{T}_{ijk}$.
+  Per Definition~\ref{def:two-one}, the integral $\int_{\mathcal{P}_{S,F}} \mathcal{F}_t(i, j, k)\,dV$ defines a specific case of $\langle \mathcal{P} \rangle$ over a Riemannian manifold, where $\mathcal{F}_t$ is a continuous tensor field on $\mathcal{P}$ and $\mathcal{P}_{S,F}$ is the subregion bounded by regions $S$ and $F$. This follows from Corollary~\ref{cor:integrability} and Fubini's theorem for Riemannian submersions: if $\mathcal{P}_{S,F}$ admits a foliation by $t$-slices, the integral decomposes as an iterated integral over fibers, recovering the contraction $\mathcal{T}_i \otimes \mathcal{T}_{ij} \otimes \mathcal{T}_{ijk}$.
 \end{theorem}
 
 \begin{corollary}
@@ -223,7 +223,7 @@ Where $\mathbb{T}^{+}$ is the set of all non-zero three-dimensional tensors such
   \end{equation}
   And thus:
   \begin{equation}
-    \langle \mathcal{P} \rangle = \int_{\mathcal{P}_{S,F}} \mathcal{F}_{t}(i, j, k) \, d\mathrm{vol}.
+    \langle \mathcal{P} \rangle = \int_{\mathcal{P}_{S,F}} \mathcal{F}_{t}(i, j, k) \, dV.
   \end{equation}
 \end{corollary}
 
@@ -240,11 +240,11 @@ Where $\mathbb{T}^{+}$ is the set of all non-zero three-dimensional tensors such
 \label{proof:construc}
 We proceed by construction, invoking Corollaries \ref{cor:tensor-nz} and \ref{cor:three}.\\
 (i) By Corollary~\ref{cor:tensor-nz}, the contraction $\mathcal{T}_i \otimes \mathcal{T}_{ij} \otimes \mathcal{T}_{ijk}$ is non-degenerate on $\mathcal{P}_{S,F}$, since the constituent tensors are assumed non-zero by Definition~\ref{def:two-one}. In particular, $\langle \mathcal{P} \rangle \neq 0$ on the initial leaf $\mathcal{P}_S$.\\
-(ii) By Corollary~\ref{cor:three}, $\mathcal{F}_t(i,j,k)$ factors as $\mathcal{T}_i(t) \otimes \mathcal{T}_{ij}(t) \otimes \mathcal{T}_{ijk}(t)$ on each leaf $\mathcal{P}_t$. Suppose the identity $\langle \mathcal{P} \rangle = \int_{\mathcal{P}_{S,t}} \mathcal{F}_t(i,j,k)\,d\mathrm{vol}$ holds for all leaves up to $\mathcal{P}_t$. Since $\mathcal{F}_t$ is continuous and non-degenerate by Corollaries~\ref{cor:tensor-nz} and~\ref{cor:three}, the identity extends to $\mathcal{P}_{t+\epsilon}$ for any $\epsilon > 0$ by continuity of the foliation parameter.\\
+(ii) By Corollary~\ref{cor:three}, $\mathcal{F}_t(i,j,k)$ factors as $\mathcal{T}_i(t) \otimes \mathcal{T}_{ij}(t) \otimes \mathcal{T}_{ijk}(t)$ on each leaf $\mathcal{P}_t$. Suppose the identity $\langle \mathcal{P} \rangle = \int_{\mathcal{P}_{S,t}} \mathcal{F}_t(i,j,k)\,dV$ holds for all leaves up to $\mathcal{P}_t$. Since $\mathcal{F}_t$ is continuous and non-degenerate by Corollaries~\ref{cor:tensor-nz} and~\ref{cor:three}, the identity extends to $\mathcal{P}_{t+\epsilon}$ for any $\epsilon > 0$ by continuity of the foliation parameter.\\
 (iii) Applying Fubini's theorem for Riemannian submersions over $\mathcal{P}_{S,F}$:
 \begin{equation}
-  \int_{\mathcal{P}_{S,F}} \mathcal{F}_t(i,j,k)\,d\mathrm{vol}
-  = \int_{S}^{F} \left(\int_{\mathcal{P}_t} \mathcal{T}_i(t) \otimes \mathcal{T}_{ij}(t) \otimes \mathcal{T}_{ijk}(t)\,d\mathrm{vol}_t\right) dt
+  \int_{\mathcal{P}_{S,F}} \mathcal{F}_t(i,j,k)\,dV
+  = \int_{S}^{F} \left(\int_{\mathcal{P}_t} \mathcal{T}_i(t) \otimes \mathcal{T}_{ij}(t) \otimes \mathcal{T}_{ijk}(t)\,dV_t\right) dt
   = \mathcal{T}_i \otimes \mathcal{T}_{ij} \otimes \mathcal{T}_{ijk}
   = \langle \mathcal{P} \rangle.
 \end{equation}
