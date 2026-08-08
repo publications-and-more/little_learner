@@ -1,4 +1,4 @@
-# Amlal El Mahrouss's Papers and Preprints.
+# Papers and Preprints.
 ## Machine Learning & al.
 
 ![License](https://img.shields.io/badge/LICENSE-Apache--2.0-blue.svg?style=for-the-badge)
