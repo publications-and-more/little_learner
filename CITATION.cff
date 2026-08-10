@@ -1,6 +1,6 @@
 cff-version: 1.2.0
-title: Amlal El Mahrouss's Papers and Preprints.
-message: Amlal El Mahrouss's papers et al from amlal.nekernel.org (Publications And More).
+title: Papers, Models, and Preprints.
+message: Papers et al from amlal.nekernel.org (Publications And More).
 type: software
 authors:
   - given-names: Amlal
@@ -9,11 +9,11 @@ authors:
 identifiers:
   - type: url
     value: 'https://amlal.nekernel.org'
-    description: Amlal El Mahrouss's Papers.
-repository-code: 'https://github.com/publications-org/pub'
+    description: Papers, Preprints, and Models
+repository-code: 'https://github.com/publications-and-more/pub'
 url: 'https://amlal.nekernel.org'
 abstract: >-
-  Amlal El Mahrouss's papers et al. From amlal.nekernel.org.
+  This repository contains papers, notes, preprints, and models from Publications And More. Citation is required for usage.
 keywords:
   - cs
   - physics
