@@ -4,14 +4,17 @@
 # (C) 2025-2026 Amlal El Mahrouss.
 # Licensed under Apache 2.0.
 
+ECHO=@echo
+LATEX=@latex
+
 .PHONY: all
 all:
-	@echo "Please specify a target: on_al, ..."
+	${ECHO} "Please specify a target: on_al, ..."
 
-.PHONY: ack
-ack:
-	@latex notes/intro/content/p.tex
+.PHONY: intro_paper
+intro_paper:
+	${LATEX} research/notes/intro/content/p.tex
 
-.PHONY: on_al
-on_al:
-	@latex notes/on_al/content/p.tex
+.PHONY: on_al_notes
+on_al_notes:
+	${LATEX} research/notes/on_al/content/p.tex

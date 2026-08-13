@@ -1,2 +1,2 @@
--I./notes/lil/content/src/LittleLearnerKit/include/
+-I./lil/content/src/LittleLearnerKit/include/
 -std=c++20

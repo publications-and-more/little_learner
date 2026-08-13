@@ -1,4 +1,4 @@
-# Papers and Preprints.
+# Little Learner and Publications
 ## Machine Learning & al.
 
 ![License](https://img.shields.io/badge/LICENSE-Apache--2.0-blue.svg?style=for-the-badge)
@@ -6,15 +6,17 @@
 
 ## Synopsis:
 
-These are the LaTeX sources of my papers, pre-prints, and notes. The bib resources are included.
-This repository contains research output et al. Credit is expected when using the work.
+This repository contains research output et al for Little Learner. Credit is expected when using the work.
+
+## Acknowledgments:
+
+I would like to thank the people who helped shape the project and review it as well, It matters to me.
 
 ## Similar Work:
 
-* https://github.com/publications-org/talk
-* https://github.com/publications-org/snippets
-* https://github.com/open-cpp-libraries/src
-* https://github.com/ne-app-eu/src
+* https://github.com/publications-and-more/talk
+* https://github.com/publications-and-more/snippets
+* https://github.com/open-cpp-libraries/core
 
 ## Credit:
 

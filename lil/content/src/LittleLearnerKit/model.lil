@@ -1,2 +1,4 @@
 (* Little Learner Lisp Model Params. *)
 
+(require 'model)
+
