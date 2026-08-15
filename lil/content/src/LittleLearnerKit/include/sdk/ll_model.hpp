@@ -36,6 +36,8 @@ struct machine_model_priv final {
 };
 
 class theorem_params;
+class theorem_params;
+class definition_params;
 class corollary_params;
 class conjecture_params;
 
