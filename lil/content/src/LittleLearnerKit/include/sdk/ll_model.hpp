@@ -39,4 +39,7 @@ class theorem_params;
 class corollary_params;
 class conjecture_params;
 
+class dtt_solver;
+class zfc_set_solver;
+
 } // namespace ll
