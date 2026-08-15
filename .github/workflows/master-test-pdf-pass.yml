@@ -17,5 +17,5 @@ jobs:
       run: sudo apt install texlive texlive-latex-extra texlive-science texlive-latex-recommended
     - name: Build CI Pub - Test Makefile (Test)
       run: make all
-    - name: Build CI Pub - Ack Note (Acknowledgments)
-      run: make ack
+    - name: Build CI Pub - Intro Note (Acknowledgments)
+      run: make intro_paper
