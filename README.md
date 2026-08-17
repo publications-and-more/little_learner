@@ -1,6 +1,8 @@
 # Little Learner and Publications
 ## Machine Learning & al.
 
+The Little Learner has been archived as of 17/08/2026, enough research have been done. And it will still be kept public for citation and peers that have downloaded the model. 
+
 ![License](https://img.shields.io/badge/LICENSE-Apache--2.0-blue.svg?style=for-the-badge)
 ![GitHub Repo Stars](https://img.shields.io/github/stars/publications-org/pub?style=for-the-badge)
 
