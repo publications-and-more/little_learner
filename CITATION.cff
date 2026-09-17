@@ -5,13 +5,13 @@ type: software
 authors:
   - given-names: Amlal
     family-names: El Mahrouss
-    email: amlal@nekernel.org
+    email: amlal@ne-app.eu
 identifiers:
   - type: url
-    value: 'https://amlal.nekernel.org'
+    value: 'https://pub.ne-app.eu'
     description: Papers, Preprints, and Models
-repository-code: 'https://github.com/publications-and-more/pub'
-url: 'https://amlal.nekernel.org'
+repository-code: 'https://github.com/publications-and-more/little_learner'
+url: 'https://pub.ne-app.eu'
 abstract: >-
   This repository contains papers, notes, preprints, and models from Publications And More. Citation is required for usage.
 keywords:

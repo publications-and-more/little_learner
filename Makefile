@@ -1,6 +1,6 @@
 # File: Makefile
 # Author: Amlal El Mahrouss
-# Purpose: Generate HTML and PDF papers from LaTex documents.
+# Purpose: Generate HTML and PDF papers from LaTeX documents.
 # (C) 2025-2026 Amlal El Mahrouss.
 # Licensed under Apache 2.0.
 

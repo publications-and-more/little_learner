@@ -1,34 +1,20 @@
-# Little Learner and Publications
+# Little Learner Model
 ## Machine Learning & al.
-
-The Little Learner has been archived as of 17/08/2026, enough research have been done. And it will still be kept public for citation and peers that have downloaded the model.
-
-Good news as of September 2026, LittleLearner is back!
 
 ![License](https://img.shields.io/badge/LICENSE-Apache--2.0-blue.svg?style=for-the-badge)
 ![GitHub Repo Stars](https://img.shields.io/github/stars/publications-org/pub?style=for-the-badge)
 
-## Synopsis:
-
-This repository contains research output et al for Little Learner. Credit is expected when using the work.
-
-## Acknowledgments:
+## Acknowledgments
 
 I would like to thank the people who helped shape the project and review it as well, It matters to me.
 
-## Similar Work:
-
-* https://github.com/publications-and-more/talk
-* https://github.com/publications-and-more/snippets
-* https://github.com/open-cpp-libraries/core
-
-## Credit:
+## Credits
 
 - Thanks to the people I contacted who took time to proof-read the work, it really means a lot.
 - Citation files are available in the sources as well.
 
-## Citing:
+## Citing
 
 When using the work, please cite it using what's inside the CITATION.cff.
 
-##### Copyright (C) Amlal El Mahrouss 2025-2026 and Ne.app, all rights reserved, licensed under the Apache License 2.0, see LICENSE.txt
+##### Copyright (C) Ne.app, all rights reserved, licensed under the Apache License 2.0, see LICENSE.txt
