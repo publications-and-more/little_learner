@@ -31,4 +31,4 @@ I would like to thank the people who helped shape the project and review it as w
 
 When using the work, please cite it using what's inside the CITATION.cff.
 
-##### Copyright (C) Amlal El Mahrouss 2025-2026, all rights reserved, licensed under the Apache License 2.0, see LICENSE.txt
+##### Copyright (C) Amlal El Mahrouss 2025-2026 and Ne.app, all rights reserved, licensed under the Apache License 2.0, see LICENSE.txt
