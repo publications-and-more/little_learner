@@ -9,7 +9,10 @@ namespace ll {
 
 bool contradiction_solver::find_contradiction(const theorem_params &thm,
                                               proof_params         &out) const {
+                                                /// NOT (THEOREM)
   const std::string negated = "¬(" + thm.conclusion + ")";
+
+  // We assume that NOT THEOREM is axiomatic.
   out.add_step("Assume: " + negated + ".");
 
   if (m_zfc.validate(negated)) {
@@ -17,7 +20,10 @@ bool contradiction_solver::find_contradiction(const theorem_params &thm,
     return false;
   }
 
+  /// IF CONTRADICTION is not matching with the AXIOMS.
   out.add_step("Contradiction: " + negated + " is inconsistent with the axioms.");
+
+  /// Thus if CONTRADICTION ON THEOREM, THUS QED.
   out.add_step("Therefore '" + thm.conclusion + "' holds. QED.");
   return true;
 }
