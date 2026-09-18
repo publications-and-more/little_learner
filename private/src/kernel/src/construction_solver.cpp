@@ -5,6 +5,8 @@
 
 #include <sdk/ll_solver.hpp>
 
+/// @brief This file you'd construct a set of logical proofs or axioms towards a proof or disproof.
+
 namespace ll {
 
 bool construction_solver::build_witness(const theorem_params &thm,
@@ -14,13 +16,15 @@ bool construction_solver::build_witness(const theorem_params &thm,
       out.add_step("Set validation failed for: '" + h + "'.");
       return false;
     }
+
     out.add_step("Witness factor verified: '" + h + "'.");
   }
 
   if (!m_dtt.check(thm.hypotheses, thm.conclusion)) {
     out.add_step("Type check failed: '" + thm.conclusion +
                  "' not derivable from the verified factors.");
-    return false;
+    
+                 return false;
   }
 
   out.add_step("Witness constructed: '" + thm.conclusion + "'. QED.");
