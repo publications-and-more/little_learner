@@ -3,13 +3,12 @@
 
 /// (C) Amlal El Mahrouss
 
-#include <cstdio>
 #include <sdk/ll_trainer.hpp>
-#include <stdexcept>
 
 namespace ll {
 
-static double status_to_loss(proof_status s) {
+/// @note this should have more granularity. 
+static double status_to_loss(const proof_status& s) {
   switch (s) {
   case proof_status::proven:
     return 0.0;
@@ -70,6 +69,7 @@ void cauchy_optimizer::step(std::vector<double> &theta,
 
   for (std::size_t i = 0; i < theta.size(); ++i) {
     const double nat_grad = grad[i] / (fisher_diag[i] + 1e-8);
+
     m_velocity_[i] = m_gamma_ * m_velocity_[i] - m_eta_ * nat_grad;
     theta[i] += m_velocity_[i];
   }
@@ -156,7 +156,7 @@ void trainer::train(int epochs) {
     const double loss = step();
 
     if (e % 100 == 0)
-      std::printf("epoch %4d  loss %.6f\n", e, loss);
+      break;
   }
 }
 
