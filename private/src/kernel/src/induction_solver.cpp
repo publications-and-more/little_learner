@@ -8,7 +8,7 @@
 namespace ll {
 
 bool induction_solver::check_base(const theorem_params &thm,
-                                  proof_params         &out) const {
+                                  proof_params &out) const {
   if (!m_dtt.check(thm.hypotheses, thm.conclusion))
     return false;
 
@@ -18,7 +18,7 @@ bool induction_solver::check_base(const theorem_params &thm,
 }
 
 bool induction_solver::check_step(const theorem_params &thm,
-                                  proof_params         &out) const {
+                                  proof_params &out) const {
   std::vector<std::string> extended = thm.hypotheses;
   extended.push_back("inductive_hypothesis: " + thm.conclusion);
 
@@ -30,8 +30,7 @@ bool induction_solver::check_step(const theorem_params &thm,
   return true;
 }
 
-std::optional<proof_params>
-induction_solver::solve(const theorem_params &thm) {
+std::optional<proof_params> induction_solver::solve(const theorem_params &thm) {
   proof_params out;
   out.theorem = thm;
   out.add_step("Strategy: induction.");

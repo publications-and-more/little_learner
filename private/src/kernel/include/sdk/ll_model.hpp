@@ -46,8 +46,6 @@ struct machine_model_priv final {
   machine_param_tree *param_tree_right{};
 };
 
-// ---- Proof object types ------------------------------------------------
-
 enum class proof_strategy { induction, construction, contradiction, unknown };
 enum class proof_status   { pending, proven, refuted, inconclusive };
 
@@ -87,8 +85,6 @@ public:
   std::string statement{};
   bool        open{ true };
 };
-
-// ---- Solver interfaces -------------------------------------------------
 
 // Dependent Type Theory checker: verifies that a proof term is well-typed
 // under the hypotheses (i.e., the conclusion is inhabited).
