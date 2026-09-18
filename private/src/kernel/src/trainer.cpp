@@ -135,6 +135,9 @@ factor_grads_t trainer::factor_grads_(double base_loss) const {
 
 double trainer::step() {
   const double loss = loss_();
+
+  (void)loss;
+
   const auto grads = factor_grads_(loss);
 
   auto make_fisher = [](const std::vector<double> &g) {
