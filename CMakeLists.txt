@@ -18,12 +18,12 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 set(OCL_INCLUDE_DIR "" CACHE PATH "Path to OCL include directory")
 
 add_library(ll_kernel STATIC
-  private/src/kernel/src/construction_solver.cpp
-  private/src/kernel/src/contradiction_solver.cpp
-  private/src/kernel/src/dtt_solver.cpp
-  private/src/kernel/src/induction_solver.cpp
-  private/src/kernel/src/trainer.cpp
-  private/src/kernel/src/zfc_solver.cpp
+  private/src/kernel/src/tactic/construction_solver.cpp
+  private/src/kernel/src/tactic/contradiction_solver.cpp
+  private/src/kernel/src/solver/dtt_solver.cpp
+  private/src/kernel/src/tactic/induction_solver.cpp
+  private/src/kernel/src/training/trainer.cpp
+  private/src/kernel/src/solver/zfc_solver.cpp
 )
 
 # ll_model.hpp includes <ocl/...> in its public interface, so OCL_INCLUDE_DIR
