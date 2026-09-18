@@ -33,3 +33,4 @@ output.txt
 output_en.txt
 *.bbl
 *.blg
+build
