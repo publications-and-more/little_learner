@@ -7,8 +7,8 @@
 
 namespace ll {
 
-/// @note this should have more granularity. 
-static double status_to_loss(const proof_status& s) {
+/// @note this should have more granularity.
+static double status_to_loss(const proof_status &s) {
   switch (s) {
   case proof_status::proven:
     return 0.0;
@@ -141,9 +141,13 @@ double trainer::step() {
   const auto grads = factor_grads_(loss);
 
   auto make_fisher = [](const std::vector<double> &g) {
+    if (g.empty()) return std::vector<double>{};
+
     std::vector<double> f(g.size());
+
     for (std::size_t i = 0; i < g.size(); ++i)
       f[i] = g[i] * g[i];
+
     return f;
   };
 
@@ -156,10 +160,7 @@ double trainer::step() {
 
 void trainer::train(int epochs) {
   for (int e = 0; e < epochs; ++e) {
-    const double loss = step();
-
-    if (e % 100 == 0)
-      break;
+    (void)step();
   }
 }
 
