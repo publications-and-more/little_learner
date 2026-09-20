@@ -51,14 +51,16 @@ void tensor_param::backprop(const std::vector<double> &flat_grad,
   grad_ijk.assign(nijk, 0.0);
 
   std::size_t idx = 0;
-  for (std::size_t a = 0; a < nijk; ++a)
-    for (std::size_t b = 0; b < nij; ++b)
+  for (std::size_t a = 0; a < nijk; ++a) {
+    for (std::size_t b = 0; b < nij; ++b) {
       for (std::size_t c = 0; c < ni; ++c, ++idx) {
         const double g = flat_grad[idx];
         grad_i[c] += g * T_ijk[a] * T_ij[b];
         grad_ij[b] += g * T_ijk[a] * T_i[c];
         grad_ijk[a] += g * T_ij[b] * T_i[c];
       }
+    }
+  }
 }
 
 void cauchy_optimizer::step(std::vector<double> &theta,
@@ -141,7 +143,8 @@ double trainer::step() {
   const auto grads = factor_grads_(loss);
 
   auto make_fisher = [](const std::vector<double> &g) {
-    if (g.empty()) return std::vector<double>{};
+    if (g.empty())
+      return std::vector<double>{};
 
     std::vector<double> f(g.size());
 
