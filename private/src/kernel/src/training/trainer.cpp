@@ -106,6 +106,7 @@ factor_grads_t trainer::factor_grads_(double base_loss) const {
   constexpr double eps = 1e-5;
 
   factor_grads_t g;
+  
   g.d_i.resize(m_params_.T_i.size(), 0.0);
   g.d_ij.resize(m_params_.T_ij.size(), 0.0);
   g.d_ijk.resize(m_params_.T_ijk.size(), 0.0);
